@@ -15,3 +15,44 @@ function getNumberInfo() {
     // Display Information in the Browser
     document.getElementById("numinfo").innerHTML = txt;
 }
+
+/*
+    Function to return the smallest cube for which exactly n permutations of
+    its digits are cube
+    cubicPermutations(2) returns 125
+    cubicPermutations(3) returns 41063625
+    cubicPermutations(4) returns 1006012008
+    cubicPermutations(5) returns 127035954683
+*/
+function cubicPermutations(n) {
+    function getDigits(num) {
+        const digits = [];
+        while (num > 0) {
+            digits.push(num%10);
+            num = Math.floor(num/10);
+        }
+        return digits;
+    }
+
+    function getCube(num) {
+        return num**3;
+    }
+
+    const digitsToCubeCounts = {};
+    let curNum = 1;
+    let digits;
+    while (!digitsToCubeCounts[digits] || digitsToCubeCounts[digits].count < n) {
+        const cube = getCube(curNum);
+        digits = getDigits(cube).sort().join();
+        if (!digitsToCubeCounts[digits]) {
+            digitsToCubeCounts[digits] = {
+                count: 1,
+                smallestCube: cube
+            };
+        } else {
+            digitsToCubeCounts[digits].count += 1;
+        }
+        curNum++;
+    }
+    return digitsToCubeCounts[digits].smallestCube;
+}
