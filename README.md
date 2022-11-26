@@ -40,3 +40,7 @@ User Stories on function `cubicPermutations(n)` taken from [FreeCodeCamp - Codin
 
 The function `cubicPermutations(n)` returns a number, where `n` is a number from 2 to 5.
 
+## Features
+
+Allows the user to enter a number in order to get the smallest cube for that number of permutations of its digits are cube.  For example, if 2 was entered, the smallest cube would be 125.  Performs checks on valid user input.  If the input is not valid, an error message is displayed.
+
