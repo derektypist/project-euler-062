@@ -44,3 +44,7 @@ The function `cubicPermutations(n)` returns a number, where `n` is a number from
 
 Allows the user to enter a number in order to get the smallest cube for that number of permutations of its digits are cube.  For example, if 2 was entered, the smallest cube would be 125.  Performs checks on valid user input.  If the input is not valid, an error message is displayed.
 
+## Technologies
+
+Uses HTML5, CSS3, JavaScript, Bootstrap 5.2.3 and Google Fonts.
+
