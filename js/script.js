@@ -5,7 +5,7 @@ function getNumberInfo() {
     // Get the value of the input field
     let num = document.getElementById("mynumber").value;
     // Check if input is valid
-    if (isNaN(num) || num.length == 0 || num<2 || num>5 || (num.length>1 && num[0]=="0") || !Number.isInteger(Number(num))) {
+    if (isNaN(num) || num.length == 0 || num < 2 || num > 5 || (num.length > 1 && num[0] == "0") || !Number.isInteger(Number(num))) {
         txt += `Invalid Input.  Please enter a whole number between 2 and 5.  Do not include leading zeros.`;
     } else {
         txt += `You have entered the number ${num}. <p>`;
@@ -28,14 +28,14 @@ function cubicPermutations(n) {
     function getDigits(num) {
         const digits = [];
         while (num > 0) {
-            digits.push(num%10);
-            num = Math.floor(num/10);
+            digits.push(num % 10);
+            num = Math.floor(num / 10);
         }
         return digits;
     }
 
     function getCube(num) {
-        return num**3;
+        return num ** 3;
     }
 
     const digitsToCubeCounts = {};
